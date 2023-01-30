@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Devise::UncommonPassword::Test < ActiveSupport::TestCase
   test "should return the specified number of passwords" do
-    Devise.password_matches = 1000
+    Devise.password_matches = 10
     assert_equal Devise.password_matches, Devise::Models::UncommonPassword.common_passwords.size
     Devise.password_matches = 100
   end

@@ -7,7 +7,6 @@ module Devise
     # a common password.
     module UncommonPassword
       extend ActiveSupport::Concern
-      # Returns a list of the 100 most common passwords.
       def self.common_passwords
         passwords_file = File.join(File.dirname(__FILE__), "passwords.txt")
 
