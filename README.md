@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/HCLarsen/devise-uncommon_password.svg?branch=master)](https://travis-ci.org/HCLarsen/devise-uncommon_password)
 [![Code Climate](https://codeclimate.com/github/HCLarsen/devise-uncommon_password.svg)](https://codeclimate.com/github/HCLarsen/devise-uncommon_password)
 
-Devise::UncommonPassword is an extension for the [devise](https://github.com/heartcombo/devise) gem, which prevents users from signing up using one of the 200 most common passwords. The list is derived from https://nordpass.com/most-common-passwords-list/.
+Devise::UncommonPassword is an extension for the [devise](https://github.com/heartcombo/devise) gem, which prevents users from signing up using one of the 1000 most common passwords. The list is derived from: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt.
 
 ## Usage
 
@@ -16,7 +16,7 @@ class AdminUser < ApplicationRecord
 end
 ```
 
-By default, the password is checked against the 200 most common passwords that fit within the minimum and maximum lengths specified in the /config/initializers/devise.rb file. However, if a developer wants to check against a smaller list, they may override this default by adding the following line to that same file:
+By default, the password is checked against the 1000 most common passwords that fit within the minimum and maximum lengths specified in the /config/initializers/devise.rb file. However, if a developer wants to check against a smaller list, they may override this default by adding the following line to that same file:
 
 ```ruby
 # Number of common passwords to check entered password against.
