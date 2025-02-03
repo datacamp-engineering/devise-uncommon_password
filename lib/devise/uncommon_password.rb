@@ -3,7 +3,7 @@ require 'devise/uncommon_password/model'
 
 module Devise
   mattr_accessor :password_matches
-  @@password_matches = 200
+  @@password_matches = 1000
   module UncommonPassword
   end
 end

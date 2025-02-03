@@ -4,13 +4,13 @@ class Devise::UncommonPassword::Test < ActiveSupport::TestCase
   test "should return the specified number of passwords" do
     Devise.password_matches = 10
     assert_equal Devise.password_matches, Devise::Models::UncommonPassword.common_passwords.size
-    Devise.password_matches = 200
+    Devise.password_matches = 1000
   end
 
   test "should return smaller array when pass_matches is too long" do
     Devise.password_matches = 10000
     assert Devise::Models::UncommonPassword.common_passwords.size <= Devise.password_matches
-    Devise.password_matches = 200
+    Devise.password_matches = 1000
   end
 
   test "should only return passwords of suitable length" do
